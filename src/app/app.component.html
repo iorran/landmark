@@ -1,4 +1,22 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<div class="ui-g">
+    <div class="ui-g-12 ui-md-2"> 
+      <p-menubar [model]="menuVertical" orientation="vertical"></p-menubar>
+    </div>
+    <div class="ui-g-12 ui-md-10 ui-g-nopad">
+        <div class="ui-g-12"> 
+          <p-menubar [model]="menuHorizontal"></p-menubar>
+          <p-growl [(value)]="msgs"></p-growl>
+        </div>
+        <div class="ui-g-12 ui-g-nopad">
+          <ng-content>
+            <router-outlet></router-outlet>  
+          </ng-content>   
+        </div>
+    </div>
+    <div class="ui-g-12">
+        Alrights reserved. V1.0
+    </div>
+</div>
+
+
+ 
